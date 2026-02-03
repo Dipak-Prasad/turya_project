@@ -1,6 +1,6 @@
 import type { Metadata } from "next"
 import { Playfair_Display, Lora } from "next/font/google"
-import { Analytics } from "@vercel/analytics/next"
+import { Analytics } from "@vercel/analytics/react"
 import { ThemeProvider } from "@/components/theme-provider"
 import "./globals.css"
 
@@ -22,11 +22,16 @@ const lora = Lora({
 export const metadata: Metadata = {
   title: "Turya Wellness – Psychology Counselling & Therapy",
   description:
-    "Professional mental health counselling and therapy services from Turya Wellness. Connect with certified therapists for compassionate, personalized mental health support online.",
+    "Professional mental health counselling and therapy services from Turya Wellness. Connect with certified therapists for personalized, compassionate mental health support online.",
   icons: {
-    icon: "/favicon.ico",
-    apple: "/favicon.ico",
+    icon: "/favicon.jpg",
+    apple: "/favicon.jpg",
   },
+  colorScheme: "light dark",
+}
+
+/* Viewport (correct place for theme-color) */
+export const viewport = {
   themeColor: [
     { media: "(prefers-color-scheme: light)", color: "#ffffff" },
     { media: "(prefers-color-scheme: dark)", color: "#0a0a0a" },
