@@ -146,7 +146,7 @@ export default function ContactPage() {
     rel="noopener noreferrer"
     className="w-full px-4 py-3 bg-accent text-accent-foreground rounded-lg font-medium text-center hover:bg-accent/90 transition-all text-sm sm:text-base"
   >
-    Client Registration
+     Registration Form
   </a>
 
   <a
@@ -155,7 +155,7 @@ export default function ContactPage() {
     rel="noopener noreferrer"
     className="w-full px-4 py-3 bg-green-600 text-white rounded-lg font-medium text-center hover:bg-green-700 transition-all text-sm sm:text-base"
   >
-    Make Payment
+    Pay Online
   </a>
 </div>
 
