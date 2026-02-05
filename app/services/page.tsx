@@ -47,9 +47,9 @@ const services = [
   {
     id: 5,
     title: "Psychiatric Services",
-    description: "Professional psychiatric evaluation and treatment with licensed psychiatrists.",
+    description: "Professional psychological evaluation and treatment with licensed pyschologist.",
     details:
-      "Our board-certified psychiatrists provide comprehensive medical evaluation, accurate diagnosis, and evidence-based treatment including medication management, psychoeducation, and integrated care for various mental health conditions ensuring your safety and wellbeing.",
+      "Our board-certified psychologist provide comprehensive medical evaluation, accurate diagnosis, and evidence-based treatment including medication management, psychoeducation, and integrated care for various mental health conditions ensuring your safety and wellbeing.",
     price: "₹1200-1800",
     image: "/psychiatric-services-consultation.jpg",
     icon: Award,

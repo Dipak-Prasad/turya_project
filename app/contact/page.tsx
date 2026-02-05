@@ -138,6 +138,28 @@ export default function ContactPage() {
                   </div>
                 ) : (
                   <form onSubmit={handleSubmit} className="space-y-4 sm:space-y-6">
+                    {/* Extra Action Buttons */}
+<div className="grid grid-cols-2 gap-4 pt-4">
+  <a
+    href="https://shorturl.at/dFRWg" // registration form link
+    target="_blank"
+    rel="noopener noreferrer"
+    className="w-full px-4 py-3 bg-accent text-accent-foreground rounded-lg font-medium text-center hover:bg-accent/90 transition-all text-sm sm:text-base"
+  >
+    Client Registration
+  </a>
+
+  <a
+    href="https://pages.razorpay.com/turyawellness" // payment link
+    target="_blank"
+    rel="noopener noreferrer"
+    className="w-full px-4 py-3 bg-green-600 text-white rounded-lg font-medium text-center hover:bg-green-700 transition-all text-sm sm:text-base"
+  >
+    Make Payment
+  </a>
+</div>
+
+
                     {error && (
                       <div className="p-4 bg-red-500/10 border border-red-500/30 rounded-lg text-center">
                         <p className="text-red-600 font-medium">{error}</p>

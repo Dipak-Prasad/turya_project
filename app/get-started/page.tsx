@@ -103,7 +103,7 @@ export default function GetStartedPage() {
               Start Your Wellness Journey
             </h1>
             <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-              Book your free 15-minute consultation with our experienced therapists. Let's work together to achieve your mental health goals.
+              Book your free consultation with our experienced therapists. Let's work together to achieve your mental health goals.
             </p>
           </div>
         </section>

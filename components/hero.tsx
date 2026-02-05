@@ -102,11 +102,11 @@ export default function Hero() {
 
         <div className="grid grid-cols-3 gap-3 md:gap-8 pt-8 md:pt-12 border-t border-border/30 animate-in fade-in slide-in-from-bottom-8 duration-700">
           <div className="transform hover:scale-110 transition-transform duration-300">
-            <p className="text-xl sm:text-2xl md:text-4xl font-bold text-accent">500+</p>
+            <p className="text-xl sm:text-2xl md:text-4xl font-bold text-accent">25+</p>
             <p className="text-xs md:text-sm text-muted-foreground mt-1 md:mt-2">Therapists</p>
           </div>
           <div className="transform hover:scale-110 transition-transform duration-300">
-            <p className="text-xl sm:text-2xl md:text-4xl font-bold text-accent">50K+</p>
+            <p className="text-xl sm:text-2xl md:text-4xl font-bold text-accent">10K+</p>
             <p className="text-xs md:text-sm text-muted-foreground mt-1 md:mt-2">Clients</p>
           </div>
           <div className="transform hover:scale-110 transition-transform duration-300">
