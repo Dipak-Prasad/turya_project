@@ -170,8 +170,8 @@ export default function Footer() {
 
           <div className="flex gap-5 font-semibold">
             <a href="#">𝕏</a>
-            <a href="#">f</a>
-            <a href="#">IG</a>
+            <a href="www.facebook.com/turyawellness">f</a>
+            <a href="www.instagram.com/turyawellness">IG</a>
             <a href="#">in</a>
           </div>
         </div>

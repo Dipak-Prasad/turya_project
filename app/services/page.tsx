@@ -46,7 +46,7 @@ const services = [
   },
   {
     id: 5,
-    title: "Psychiatric Services",
+    title: "Psychological Services",
     description: "Professional psychological evaluation and treatment with licensed pyschologist.",
     details:
       "Our board-certified psychologist provide comprehensive medical evaluation, accurate diagnosis, and evidence-based treatment including medication management, psychoeducation, and integrated care for various mental health conditions ensuring your safety and wellbeing.",
