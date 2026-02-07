@@ -37,7 +37,7 @@ export default function WhyChoose() {
       <div className="max-w-6xl mx-auto">
         <div className="text-center mb-16 md:mb-20">
           <h2 className="text-3xl md:text-5xl font-display font-bold text-foreground mb-4 text-balance">
-            Why Choose Serenity
+            Why Choose TuryaWellness
           </h2>
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
             We stand out because we genuinely care about your well-being

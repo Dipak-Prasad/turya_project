@@ -7,6 +7,7 @@ import Navigation from "@/components/navigation"
 import Footer from "@/components/footer"
 import { CheckCircle, Clock, Shield } from "lucide-react"
 import Link from "next/link"
+import Image from "next/image"
 import emailjs from "@emailjs/browser"
 
 export default function GetStartedPage() {
@@ -103,18 +104,240 @@ export default function GetStartedPage() {
               Start Your Wellness Journey
             </h1>
             <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-              Book your free consultation with our experienced therapists. Let's work together to achieve your mental health goals.
+              Book your consultation with our experienced therapists. Let's work together to achieve your mental health goals.
             </p>
           </div>
         </section>
 
+{/* Terms & Conditions Section */}
+<section className="py-12 sm:py-16 md:py-20 px-3 sm:px-6 lg:px-8 bg-gradient-to-b from-background to-amber-50 dark:to-amber-950/10 border-b border-border">
+  <div className="max-w-4xl mx-auto">
+    <div className="mb-8 sm:mb-10">
+      <h2 className="text-2xl sm:text-3xl md:text-4xl font-display font-bold text-foreground mb-3 sm:mb-4 flex items-center gap-2">
+        <svg
+          className="w-6 sm:w-8 h-6 sm:h-8 text-amber-600"
+          fill="none"
+          stroke="currentColor"
+          viewBox="0 0 24 24"
+        >
+          <path
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            strokeWidth={2}
+            d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"
+          />
+        </svg>
+        Before You Proceed to Payment
+      </h2>
+
+      <p className="text-sm sm:text-base text-muted-foreground">
+        Please review and understand our terms and conditions.
+      </p>
+
+      {/* Terms Link */}
+      <Link
+        href="/terms-and-conditions"
+        className="inline-block mt-2 text-sm font-medium text-amber-600 hover:text-amber-700 underline underline-offset-4"
+      >
+        View full Terms & Conditions
+      </Link>
+    </div>
+
+    {/* Acknowledgment Box */}
+    <div className="mt-6 sm:mt-8 p-4 sm:p-6 bg-amber-50 dark:bg-amber-950/10 border-2 border-amber-200 dark:border-amber-900 rounded-lg">
+      <div className="flex items-start gap-3">
+        <svg
+          className="w-5 h-5 text-amber-600 mt-0.5 flex-shrink-0"
+          fill="currentColor"
+          viewBox="0 0 20 20"
+        >
+          <path
+            fillRule="evenodd"
+            d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+            clipRule="evenodd"
+          />
+        </svg>
+
+        <p className="text-xs sm:text-sm text-foreground">
+          <span className="font-bold">
+            By proceeding with payment, you acknowledge that you have read,
+            understood, and agree to all terms and conditions above.
+          </span>{" "}
+          You also confirm that the information provided is accurate and
+          complete.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+        {/* Payment Section */}
+        <section className="py-12 sm:py-16 md:py-24 px-3 sm:px-6 lg:px-8 bg-gradient-to-b from-primary/5 via-background to-accent/2 border-b border-border">
+          <div className="max-w-6xl mx-auto">
+            <div className="text-center mb-10 sm:mb-16">
+              <h2 className="text-2xl sm:text-3xl md:text-4xl font-display font-bold text-foreground mb-3 sm:mb-4">Payment Methods</h2>
+              <p className="text-base sm:text-lg text-muted-foreground">Choose your preferred way to pay</p>
+            </div>
+
+            <div className="grid sm:grid-cols-1 md:grid-cols-2 gap-6 md:gap-8 mb-10 sm:mb-12">
+              {/* QR Code and Direct Methods */}
+              <div className="p-6 sm:p-8 md:p-10 bg-card border-2 border-primary/30 rounded-xl sm:rounded-2xl hover:border-primary hover:shadow-2xl transition-all">
+                <h3 className="text-xl sm:text-2xl font-bold text-foreground mb-6 sm:mb-8 flex items-center gap-2">
+                  <span className="w-8 h-8 bg-primary text-white rounded-full flex items-center justify-center text-sm font-bold">1</span>
+                  QR Code & UPI
+                </h3>
+                
+                <div className="space-y-6">
+                  {/* QR Code */}
+                  <div className="bg-gradient-to-br from-primary/10 to-primary/5 p-4 sm:p-6 rounded-lg sm:rounded-xl flex items-center justify-center">
+                    <div className="text-center">
+                      <p className="text-xs sm:text-sm text-muted-foreground mb-3 sm:mb-4 font-medium">Scan with any app:</p>
+                      <p className="text-xs text-muted-foreground mb-2 sm:mb-3">Google Pay • PhonePe • PayTm</p>
+                      <Image
+                        src="/qr_code.jpeg"
+                        alt="Payment QR Code"
+                        width={180}
+                        height={180}
+                        className="mx-auto rounded-lg border-2 border-primary/20 w-44 sm:w-56"
+                      />
+                    </div>
+                  </div>
+                </div>
+
+                {/* UPI Details */}
+                <div className="space-y-3">
+                  <div className="p-3 sm:p-4 bg-gradient-to-r from-primary/10 to-primary/5 rounded-lg border border-primary/20">
+                    <p className="text-xs text-muted-foreground mb-2 font-medium">UPI ID</p>
+                    <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-2">
+                      <code className="text-xs sm:text-sm font-bold text-primary break-all">6291206580@okbizaxis</code>
+                      <button
+                        onClick={() => navigator.clipboard.writeText("6291206580@okbizaxis")}
+                        className="px-3 py-1.5 bg-primary text-white rounded text-xs font-medium hover:bg-primary/90 transition-all whitespace-nowrap"
+                      >
+                        Copy
+                      </button>
+                    </div>
+                  </div>
+
+                  <div className="p-3 sm:p-4 bg-gradient-to-r from-accent/10 to-accent/5 rounded-lg border border-accent/20">
+                    <p className="text-xs text-muted-foreground mb-2 font-medium">Business Phone (Google Pay)</p>
+                    <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-2">
+                      <code className="text-xs sm:text-sm font-bold text-accent">+91 6291206580</code>
+                      <button
+                        onClick={() => navigator.clipboard.writeText("+916291206580")}
+                        className="px-3 py-1.5 bg-accent text-white rounded text-xs font-medium hover:bg-accent/90 transition-all whitespace-nowrap"
+                      >
+                        Copy
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            {/* Razorpay and Bank Transfer */}
+            <div className="space-y-6 sm:space-y-8">
+              {/* Razorpay */}
+              <div className="p-6 sm:p-8 md:p-10 bg-card border-2 border-blue-500/30 rounded-xl sm:rounded-2xl hover:border-blue-500 hover:shadow-2xl transition-all">
+                <h3 className="text-xl sm:text-2xl font-bold text-foreground mb-4 sm:mb-6 flex items-center gap-2">
+                  <span className="w-8 h-8 bg-blue-500 text-white rounded-full flex items-center justify-center text-sm font-bold">2</span>
+                  <span>Cards & Wallets</span>
+                </h3>
+                <p className="text-muted-foreground mb-5 sm:mb-6 text-xs sm:text-sm">Credit Card, Debit Card, Net Banking, or Wallet</p>
+                <a
+                  href="https://rzp.io/l/turyawellness"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-2 px-6 py-3 bg-blue-500 text-white rounded-lg font-semibold hover:bg-blue-600 hover:shadow-lg transition-all"
+                >
+                  Pay via Razorpay
+                  <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7l5 5m0 0l-5 5m5-5H6" />
+                  </svg>
+                </a>
+              </div>
+
+              {/* Bank Transfer */}
+              <div className="p-6 sm:p-8 md:p-10 bg-card border-2 border-green-500/30 rounded-xl sm:rounded-2xl hover:border-green-500 hover:shadow-2xl transition-all">
+                <h3 className="text-xl sm:text-2xl font-bold text-foreground mb-4 sm:mb-6 flex items-center gap-2">
+                  <span className="w-8 h-8 bg-green-500 text-white rounded-full flex items-center justify-center text-sm font-bold">3</span>
+                  Bank Transfer
+                </h3>
+                <div className="space-y-3 text-sm">
+                  <div className="p-3 sm:p-4 bg-green-50 dark:bg-green-950/20 rounded-lg border border-green-200 dark:border-green-900">
+                    <p className="text-xs font-semibold text-foreground mb-1">ACCOUNT HOLDER</p>
+                    <p className="text-sm text-foreground font-medium">Turya Wellness</p>
+                  </div>
+                  <div className="p-3 sm:p-4 bg-green-50 dark:bg-green-950/20 rounded-lg border border-green-200 dark:border-green-900">
+                    <p className="text-xs font-semibold text-foreground mb-2">ACCOUNT NUMBER</p>
+                    <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-2">
+                      <p className="text-xs sm:text-sm text-foreground font-medium break-all">10210006446909</p>
+                      <button
+                        onClick={() => navigator.clipboard.writeText("10210006446909")}
+                        className="text-xs px-2 py-1 bg-green-500 text-white rounded hover:bg-green-600 transition-all whitespace-nowrap"
+                      >
+                        Copy
+                      </button>
+                    </div>
+                  </div>
+                  <div className="p-3 sm:p-4 bg-green-50 dark:bg-green-950/20 rounded-lg border border-green-200 dark:border-green-900">
+                    <p className="text-xs font-semibold text-foreground mb-2">IFSC CODE</p>
+                    <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-2">
+                      <p className="text-xs sm:text-sm text-foreground font-medium">BDBL0001532</p>
+                      <button
+                        onClick={() => navigator.clipboard.writeText("BDBL0001532")}
+                        className="text-xs px-2 py-1 bg-green-500 text-white rounded hover:bg-green-600 transition-all whitespace-nowrap"
+                      >
+                        Copy
+                      </button>
+                    </div>
+                  </div>
+                  <div className="p-3 sm:p-4 bg-green-50 dark:bg-green-950/20 rounded-lg border border-green-200 dark:border-green-900">
+                    <p className="text-xs font-semibold text-foreground mb-1">BANK NAME</p>
+                    <p className="text-sm text-foreground font-medium">Bandhan Bank</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            {/* Info Box */}
+            <div className="p-4 sm:p-6 bg-blue-50 dark:bg-blue-950/20 border-2 border-blue-200 dark:border-blue-900 rounded-lg sm:rounded-xl">
+              <h4 className="font-semibold text-sm sm:text-base text-foreground mb-3 flex items-center gap-2">
+                <svg className="w-5 h-5 text-blue-600 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                </svg>
+                Payment Instructions
+              </h4>
+              <ul className="space-y-2 text-xs sm:text-sm text-muted-foreground">
+                <li className="flex gap-2">
+                  <span className="text-blue-600 font-bold flex-shrink-0">•</span>
+                  <span>Choose any payment method above that is convenient for you</span>
+                </li>
+                <li className="flex gap-2">
+                  <span className="text-blue-600 font-bold flex-shrink-0">•</span>
+                  <span>Complete your session booking details first, then proceed to payment</span>
+                </li>
+                <li className="flex gap-2">
+                  <span className="text-blue-600 font-bold flex-shrink-0">•</span>
+                  <span>After successful payment, your session will be confirmed via email</span>
+                </li>
+                <li className="flex gap-2">
+                  <span className="text-blue-600 font-bold flex-shrink-0">•</span>
+                  <span>For bank transfers, please share the transaction details with us</span>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </section>
+
         {/* Main Content */}
-        <section className="py-16 md:py-24 px-4 sm:px-6 lg:px-8">
+        <section className="py-12 sm:py-16 md:py-24 px-3 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto">
             {!submitted ? (
-              <div className="grid md:grid-cols-3 gap-8">
+              <div className="grid sm:grid-cols-1 md:grid-cols-3 gap-6 md:gap-8">
                 {/* Step Progress */}
-                <div className="md:col-span-1">
+                <div className="sm:col-span-1">
                   <div className="space-y-4">
                     {[1, 2, 3].map((s) => (
                       <div

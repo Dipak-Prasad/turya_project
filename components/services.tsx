@@ -52,7 +52,7 @@ export default function Services() {
             <div className="flex justify-center order-2 md:order-1">
               <div className="rounded-2xl overflow-hidden shadow-2xl border-4 border-accent/40 hover:border-accent/80 transition-all duration-300 transform hover:scale-105 w-full max-w-sm">
                 <img
-                  src="https://static.wixstatic.com/media/158131_5121ab3b0e2340ecbf7a81a7a604ff91~mv2.jpg/v1/fill/w_365,h_454,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/IMG20231214123246.jpg"
+                  src="/founder.jpeg"
                   alt="Professional Counselling"
                   className="w-full h-auto object-cover"
                 />

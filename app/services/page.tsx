@@ -1,6 +1,6 @@
 import Navigation from "@/components/navigation"
 import Footer from "@/components/footer"
-import { ArrowRight, Award, Users, Heart } from "lucide-react"
+import { ArrowRight, Award, Users, Heart, Clock } from "lucide-react"
 import Link from "next/link"
 
 const services = [
@@ -10,7 +10,8 @@ const services = [
     description: "One-on-one counseling sessions tailored to your specific needs and goals.",
     details:
       "Our individual therapy sessions provide a safe, confidential space to explore your thoughts, feelings, and experiences. Whether you're dealing with anxiety, depression, trauma, or personal growth, our licensed therapists work with you to develop effective coping strategies and build resilience for lasting change.",
-    price: "₹1000-1500",
+    price: "₹499-699",
+    duration: "45 minutes",
     image: "/individual-therapy-counseling.jpg",
     icon: Heart,
   },
@@ -20,7 +21,8 @@ const services = [
     description: "Strengthen relationships with professional guidance and communication techniques.",
     details:
       "Relationship challenges can be complex and emotionally draining. Our experienced couples therapists help partners improve communication, resolve conflicts constructively, and strengthen emotional bonds through evidence-based therapeutic techniques designed for long-term relationship satisfaction.",
-    price: "₹1500-2000",
+    price: "₹799-999",
+    duration: "75 minutes",
     image: "/couple-therapy-counseling.jpg",
     icon: Users,
   },
@@ -30,7 +32,8 @@ const services = [
     description: "Specialized support for adolescents dealing with stress, anxiety, and life challenges.",
     details:
       "Adolescence brings unique challenges and transitions. We provide specialized, judgment-free support for teens dealing with academic pressure, social anxiety, self-esteem issues, family conflicts, identity questions, and peer relationships with compassion and expertise.",
-    price: "₹800-1200",
+    price: "₹499-699",
+    duration: "45 minutes",
     image: "/teen-counseling-support.jpg",
     icon: Award,
   },
@@ -40,17 +43,19 @@ const services = [
     description: "Learn effective coping strategies to manage daily stress and anxiety.",
     details:
       "Modern life brings constant pressure and stress that impacts our physical and mental health. Learn scientifically-proven mindfulness techniques, breathing exercises, and stress management strategies to improve resilience, enhance focus, and achieve better work-life balance.",
-    price: "₹900-1300",
+    price: "₹499-699",
+    duration: "45 minutes",
     image: "/stress-management-wellness.jpg",
     icon: Heart,
   },
   {
     id: 5,
-    title: "Psychological Services",
-    description: "Professional psychological evaluation and treatment with licensed pyschologist.",
+    title: "Psychological Counseling",
+    description: "Professional psychological evaluation and specialized therapeutic interventions.",
     details:
-      "Our board-certified psychologist provide comprehensive medical evaluation, accurate diagnosis, and evidence-based treatment including medication management, psychoeducation, and integrated care for various mental health conditions ensuring your safety and wellbeing.",
-    price: "₹1200-1800",
+      "Our clinical psychologists provide comprehensive psychological assessment, evidence-based treatment for various mental health conditions, trauma therapy, personality assessments, and integrated care ensuring comprehensive mental wellness support.",
+    price: "₹499-1999",
+    duration: "45 minutes",
     image: "/psychiatric-services-consultation.jpg",
     icon: Award,
   },
@@ -60,7 +65,8 @@ const services = [
     description: "Join supportive communities and share experiences with others.",
     details:
       "Group therapy provides powerful therapeutic benefits through shared experiences, mutual support, and learning from peers facing similar challenges. Our facilitators create a safe, confidential community where you can build connections, gain perspective, and grow together.",
-    price: "₹400-600",
+    price: "₹299-499",
+    duration: "60 minutes",
     image: "/group-therapy-sessions.jpg",
     icon: Users,
   },
@@ -84,6 +90,7 @@ export default function ServicesPage() {
             </p>
           </div>
         </section>
+
 
         {/* Services Grid */}
         <section className="py-12 sm:py-20 md:py-28 px-4 sm:px-6 lg:px-8">
@@ -117,11 +124,20 @@ export default function ServicesPage() {
                       <p className="text-muted-foreground mb-3 leading-relaxed text-sm">{service.description}</p>
                       <p className="text-xs text-muted-foreground mb-6 line-clamp-2">{service.details}</p>
                       
-                      <div className="flex items-center justify-between pt-4 border-t border-border">
-                        <span className="text-primary font-bold text-sm">{service.price}</span>
+                      <div className="space-y-4 pt-4 border-t border-border">
+                        <div className="flex items-center justify-between">
+                          <div>
+                            <p className="text-xs text-muted-foreground mb-1">Per Session</p>
+                            <p className="text-lg sm:text-xl font-bold text-primary">{service.price}</p>
+                          </div>
+                          <div className="text-right">
+                            <p className="text-xs text-muted-foreground mb-1">Duration</p>
+                            <p className="text-sm font-semibold text-foreground">{service.duration}</p>
+                          </div>
+                        </div>
                         <Link
                           href="/get-started"
-                          className="text-primary hover:text-primary/80 transition-colors flex items-center gap-1 text-sm font-medium"
+                          className="w-full inline-flex items-center justify-center gap-2 px-4 py-2.5 bg-primary text-primary-foreground rounded-lg hover:bg-primary/90 transition-all text-sm font-semibold"
                         >
                           Book Now <ArrowRight size={14} />
                         </Link>
@@ -141,13 +157,13 @@ export default function ServicesPage() {
               Ready to Start Your Wellness Journey?
             </h2>
             <p className="text-lg text-white/95 mb-12 max-w-2xl mx-auto leading-relaxed">
-              Book your free consultation today and take the first step towards better mental health.
+              Book your consultation today and take the first step towards better mental health.
             </p>
             <Link
               href="/get-started"
               className="inline-block px-8 py-4 bg-white text-primary rounded-lg font-semibold hover:shadow-xl hover:scale-105 transition-all duration-200"
             >
-              Book Free Consultation
+              Book Consultation
             </Link>
           </div>
         </section>

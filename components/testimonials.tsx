@@ -38,7 +38,7 @@ export default function Testimonials() {
             Stories of Transformation
           </h2>
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-            Hear from people who\'ve found healing and growth with us
+            Hear from people who have found healing and growth with us
           </p>
         </div>
 

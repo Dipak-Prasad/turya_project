@@ -153,7 +153,7 @@ export default function Footer() {
             <h4 className="font-semibold text-white mb-4">Legal</h4>
             <ul className="space-y-3 text-sm">
               <li><Link href="#">Privacy</Link></li>
-              <li><Link href="#">Terms</Link></li>
+              <li><Link href="/terms-and-conditions">Terms</Link></li>
               <li><Link href="#">Cookies</Link></li>
             </ul>
           </div>
@@ -169,10 +169,8 @@ export default function Footer() {
           </p>
 
           <div className="flex gap-5 font-semibold">
-            <a href="#">𝕏</a>
-            <a href="www.facebook.com/turyawellness">f</a>
-            <a href="www.instagram.com/turyawellness">IG</a>
-            <a href="#">in</a>
+            <a href="https://www.facebook.com/turyawellness">f</a>
+            <a href="https://www.instagram.com/turyawellness/">IG</a>
           </div>
         </div>
       </div>

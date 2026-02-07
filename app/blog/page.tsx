@@ -170,14 +170,14 @@ export default function BlogPage() {
               Ready to Transform Your Mental Health?
             </h2>
             <p className="text-lg text-white/95 mb-12 max-w-2xl mx-auto">
-              Book your free consultation with our experienced therapists and
+              Book your consultation with our experienced therapists and
               take the first step towards a healthier, happier you.
             </p>
             <Link
               href="/get-started"
               className="inline-block px-8 py-4 bg-white text-primary rounded-lg font-semibold hover:shadow-xl hover:scale-105 transition-all duration-200"
             >
-              Book Free Consultation
+              Book Consultation 
             </Link>
           </div>
         </section>

@@ -1,17 +1,13 @@
 'use client'
 
 import Image from 'next/image'
-import { Instagram, Facebook } from 'lucide-react'
 
 type TeamMember = {
   id: number
   name: string
   role: string
+  qualification: string
   image: string
-  social: {
-    instagram: string
-    facebook: string
-  }
 }
 
 const teamMembers: TeamMember[] = [
@@ -19,29 +15,29 @@ const teamMembers: TeamMember[] = [
     id: 1,
     name: 'Prity D Sarkar',
     role: 'Psychologist',
+    qualification: 'PGD (Counselling)',
     image: '/Prity_Dey.jpeg',
-    social: { instagram: '#', facebook: '#' },
   },
   {
     id: 2,
     name: 'Ruma Chowdhury',
     role: 'Psychologist',
+    qualification: 'MSc (Psychology)',
     image: '/Ruma_Chowdhury.jpeg',
-    social: { instagram: '#', facebook: '#' },
   },
   {
     id: 3,
     name: 'Shilpa Das',
     role: 'Counsellor',
+    qualification: 'MA (Psychology)',
     image: '/Shilpa_Das.jpeg',
-    social: { instagram: '#', facebook: '#' },
   },
   {
     id: 4,
     name: 'Diaana Tauqeer',
     role: 'Counsellor',
+    qualification: 'BA (Psychology)',
     image: '/Diaana.jpeg',
-    social: { instagram: '#', facebook: '#' },
   },
 ]
 
@@ -89,42 +85,14 @@ function TeamMemberCard({ member }: { member: TeamMember }) {
       </h3>
 
       {/* Role */}
-      <p className="text-xs sm:text-sm text-muted-foreground font-medium mt-1 mb-4">
+      <p className="text-xs sm:text-sm text-muted-foreground font-medium mt-1">
         {member.role}
       </p>
 
-      {/* Socials */}
-      <div className="flex gap-3">
-        <a
-          href={member.social.instagram}
-          aria-label={`${member.name} Instagram`}
-          className="
-            w-9 h-9 rounded-full
-            flex items-center justify-center
-            bg-muted
-            transition-all duration-300
-            hover:bg-primary hover:text-primary-foreground
-            active:scale-95
-          "
-        >
-          <Instagram size={16} />
-        </a>
-
-        <a
-          href={member.social.facebook}
-          aria-label={`${member.name} Facebook`}
-          className="
-            w-9 h-9 rounded-full
-            flex items-center justify-center
-            bg-muted
-            transition-all duration-300
-            hover:bg-primary hover:text-primary-foreground
-            active:scale-95
-          "
-        >
-          <Facebook size={16} />
-        </a>
-      </div>
+      {/* Qualification */}
+      <p className="text-xs sm:text-sm text-primary/80 font-semibold">
+        {member.qualification}
+      </p>
     </div>
   )
 }
@@ -144,7 +112,7 @@ export default function MeetTeam() {
         {/* Header */}
         <div className="text-center mb-10 sm:mb-14 md:mb-16">
           <h2 className="text-2xl sm:text-3xl md:text-5xl font-bold text-primary mb-3">
-            Meet the Team
+            Our Therapist
           </h2>
           <p className="text-sm sm:text-base md:text-lg text-muted-foreground max-w-2xl mx-auto">
             Our experienced psychologists and counsellors are here to support

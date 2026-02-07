@@ -351,7 +351,7 @@ export default function ContactPage() {
 
     <div className="w-full h-[450px] rounded-lg overflow-hidden border border-border shadow-lg">
       <iframe
-        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3681.980968068048!2d88.34719630000001!3d22.654498199999995!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39f89d799969aa85%3A0x789a67f8d3946903!2sTURYA%20WELLNESS%20COUNSELLING%20(%20BALLY%20)!5e0!3m2!1sen!2sin!4v1770114214537!5m2!1sen!2sin"
+        src="https://www.google.com/maps/d/embed?mid=1YCyxBizNazKbXLueXWoMTTBn28CNQrI&ehbc=2E312F"
         width="100%"
         height="100%"
         style={{ border: 0 }}
@@ -373,7 +373,7 @@ export default function ContactPage() {
               Check out our frequently asked questions or book a free consultation with our experienced team.
             </p>
             <button className="px-8 py-4 bg-white text-primary rounded-lg font-semibold hover:shadow-xl hover:scale-105 transition-all duration-200">
-              Book Free Consultation
+              Book Consultation
             </button>
           </div>
         </section>

@@ -9,7 +9,7 @@ export default function CTA() {
           Ready for a Fresh Start?
         </h2>
         <p className="text-lg text-white/95 mb-12 max-w-2xl mx-auto leading-relaxed">
-          Begin your mental health journey today with a free consultation from our experienced therapists.
+          Begin your mental health journey today with a consultation from our experienced therapists.
         </p>
 
         <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -17,7 +17,7 @@ export default function CTA() {
             href="/get-started"
             className="px-8 py-3 bg-white text-primary rounded-lg hover:bg-white/90 transition-all font-semibold flex items-center justify-center gap-2"
           >
-            Start Free Consultation <ArrowRight size={18} />
+            Start Consultation <ArrowRight size={18} />
           </Link>
           <Link
             href="/contact"
