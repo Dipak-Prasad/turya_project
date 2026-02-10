@@ -11,11 +11,8 @@ export default function Navigation() {
   const { theme, setTheme } = useTheme()
   const [mounted, setMounted] = useState(false)
 
-  useEffect(() => {
-    setMounted(true)
-  }, [])
+  useEffect(() => setMounted(true), [])
 
-  // Prevent background scroll when mobile menu is open
   useEffect(() => {
     document.body.style.overflow = isOpen ? "hidden" : "auto"
   }, [isOpen])
@@ -28,48 +25,46 @@ export default function Navigation() {
   ]
 
   return (
-    <nav
-      className="
-        fixed top-0 w-full z-50
-        bg-background/90 backdrop-blur-md
-        border-b border-border/50
-        animate-in fade-in slide-in-from-top-2 duration-500
-      "
-    >
-      <div className="max-w-7xl mx-auto px-3 sm:px-6 lg:px-8">
-        <div className="flex justify-between items-center h-14 sm:h-16 md:h-20">
+    <nav className="
+      fixed top-0 w-full z-50
+      bg-background/95 backdrop-blur-md
+      border-b border-border/50
+      animate-in fade-in slide-in-from-top-2 duration-500
+    ">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="flex justify-between items-center h-16 sm:h-[72px] lg:h-[84px]">
 
           {/* Logo */}
           <Link
             href="/"
             onClick={() => setIsOpen(false)}
-            className="flex items-center gap-2 md:gap-3 hover:opacity-80 transition-opacity"
+            className="flex items-center gap-3 hover:opacity-90 transition-opacity"
           >
             <Image
               src="/turya-logo.png"
               alt="Turya Wellness Logo"
-              width={48}
-              height={48}
-              className="h-9 w-9 sm:h-10 sm:w-10 md:h-12 md:w-12 object-contain"
+              width={56}
+              height={56}
+              className="h-10 w-10 sm:h-12 sm:w-12 lg:h-14 lg:w-14 object-contain"
             />
             <div className="hidden sm:block leading-tight">
-              <p className="text-sm md:text-xl font-display font-bold text-primary">
+              <p className="text-lg lg:text-2xl font-display font-bold text-primary">
                 Turya Wellness
               </p>
-              <p className="text-xs text-accent font-semibold">
+              <p className="text-xs lg:text-sm text-accent font-semibold tracking-wide">
                 attuned emotions
               </p>
             </div>
           </Link>
 
           {/* Desktop Menu */}
-          <div className="hidden md:flex items-center gap-6">
-            {menuItems.map((item) => (
+          <div className="hidden md:flex items-center gap-8">
+            {menuItems.map(item => (
               <Link
                 key={item.name}
                 href={item.href}
                 className="
-                  relative text-sm font-medium text-foreground
+                  relative text-base font-medium text-foreground
                   hover:text-accent transition-colors
                   after:absolute after:-bottom-1 after:left-0
                   after:h-[2px] after:w-0 after:bg-accent
@@ -83,19 +78,19 @@ export default function Navigation() {
             {mounted && (
               <button
                 onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
-                className="p-2.5 rounded-lg hover:bg-accent/20 transition-all hover:scale-110"
+                className="p-3 rounded-xl hover:bg-accent/20 transition-all hover:scale-110"
                 aria-label="Toggle theme"
               >
-                {theme === "dark" ? <Sun size={20} /> : <Moon size={20} />}
+                {theme === "dark" ? <Sun size={22} /> : <Moon size={22} />}
               </button>
             )}
 
             <Link
               href="/get-started"
               className="
-                px-6 py-2.5 bg-primary text-primary-foreground
-                rounded-lg text-sm font-medium
-                hover:bg-primary/85 hover:shadow-lg hover:scale-105
+                px-7 py-3 bg-primary text-primary-foreground
+                rounded-xl text-base font-semibold
+                hover:bg-primary/90 hover:shadow-lg hover:scale-105
                 transition-all
               "
             >
@@ -104,36 +99,31 @@ export default function Navigation() {
           </div>
 
           {/* Mobile Controls */}
-          <div className="md:hidden flex items-center gap-1">
+          <div className="md:hidden flex items-center gap-2">
             {mounted && (
               <button
                 onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
-                className="p-2 rounded-lg hover:bg-accent/20 transition-all active:scale-95"
+                className="p-2.5 rounded-xl hover:bg-accent/20 transition-all"
               >
-                {theme === "dark" ? <Sun size={18} /> : <Moon size={18} />}
+                {theme === "dark" ? <Sun size={20} /> : <Moon size={20} />}
               </button>
             )}
 
-            {/* Animated Hamburger */}
             <button
               onClick={() => setIsOpen(!isOpen)}
-              className="relative p-2 rounded-lg transition-all active:scale-90"
+              className="relative p-2.5 rounded-xl transition-all"
               aria-label="Toggle menu"
             >
               <Menu
-                size={22}
+                size={24}
                 className={`absolute transition-all duration-300 ${
-                  isOpen
-                    ? "opacity-0 rotate-90 scale-75"
-                    : "opacity-100 rotate-0 scale-100"
+                  isOpen ? "opacity-0 rotate-90 scale-75" : "opacity-100"
                 }`}
               />
               <X
-                size={22}
+                size={24}
                 className={`transition-all duration-300 ${
-                  isOpen
-                    ? "opacity-100 rotate-0 scale-100"
-                    : "opacity-0 -rotate-90 scale-75"
+                  isOpen ? "opacity-100" : "opacity-0 -rotate-90 scale-75"
                 }`}
               />
             </button>
@@ -141,30 +131,23 @@ export default function Navigation() {
         </div>
 
         {/* Mobile Menu */}
-        <div
-          className={`
-            md:hidden overflow-hidden
-            transition-all duration-500 ease-out
-            ${isOpen
-              ? "max-h-[520px] opacity-100 translate-y-0"
-              : "max-h-0 opacity-0 -translate-y-4"}
-          `}
-        >
+        <div className={`
+          md:hidden overflow-hidden
+          transition-all duration-500 ease-out
+          ${isOpen ? "max-h-[600px] opacity-100" : "max-h-0 opacity-0"}
+        `}>
           <div className="pt-4 pb-6 space-y-2 border-t border-border/30">
             {menuItems.map((item, index) => (
               <Link
                 key={item.name}
                 href={item.href}
                 onClick={() => setIsOpen(false)}
-                className={`
-                  block w-full px-4 py-3 rounded-lg text-sm font-medium
-                  transition-all duration-300
+                className="
+                  block w-full px-5 py-4 rounded-xl
+                  text-base font-medium
                   hover:bg-primary/10 hover:text-accent
-                  active:scale-[0.97]
-                  ${isOpen
-                    ? "opacity-100 translate-x-0"
-                    : "opacity-0 -translate-x-4"}
-                `}
+                  transition-all
+                "
                 style={{ transitionDelay: `${index * 80}ms` }}
               >
                 {item.name}
@@ -174,17 +157,12 @@ export default function Navigation() {
             <Link
               href="/get-started"
               onClick={() => setIsOpen(false)}
-              className={`
-                block w-full mt-3 px-6 py-3
+              className="
+                block w-full mt-3 px-6 py-4
                 bg-primary text-primary-foreground
-                rounded-lg text-sm font-medium text-center
-                transition-all duration-300
-                hover:bg-primary/85 active:scale-[0.97]
-                ${isOpen
-                  ? "opacity-100 translate-y-0"
-                  : "opacity-0 translate-y-2"}
-              `}
-              style={{ transitionDelay: "360ms" }}
+                rounded-xl text-base font-semibold text-center
+                hover:bg-primary/90 transition-all
+              "
             >
               Get Started
             </Link>

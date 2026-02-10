@@ -15,7 +15,7 @@ const teamMembers: TeamMember[] = [
     id: 1,
     name: 'Prity D Sarkar',
     role: 'Psychologist',
-    qualification: 'PGD (Counselling)',
+    qualification: 'PGD (Counselling),  MA (Psychology)',
     image: '/Prity_Dey.jpeg',
   },
   {
@@ -28,7 +28,7 @@ const teamMembers: TeamMember[] = [
   {
     id: 3,
     name: 'Shilpa Das',
-    role: 'Counsellor',
+    role: 'Psychologist',
     qualification: 'MA (Psychology)',
     image: '/Shilpa_Das.jpeg',
   },

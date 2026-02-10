@@ -2,7 +2,7 @@
 
 import React, { useState, useEffect } from "react"
 import Link from "next/link"
-import { Mail, Phone, Heart } from "lucide-react"
+import { Mail, Phone, Heart, Instagram, Facebook, Youtube } from "lucide-react"
 import emailjs from "@emailjs/browser"
 
 export default function Footer() {
@@ -29,7 +29,7 @@ export default function Footer() {
 
     try {
       await emailjs.send("service_abyji3h", "template_lttpd2e", {
-        to_email: "prasaddipak086@gmail.com",
+        to_email: "turya.emotions@gmail.com",
         from_email: email,
         subject: "New Newsletter Subscription",
         message: `New subscriber: ${email}`,
@@ -168,9 +168,37 @@ export default function Footer() {
             <Heart size={14} fill="currentColor" />
           </p>
 
-          <div className="flex gap-5 font-semibold">
-            <a href="https://www.facebook.com/turyawellness">f</a>
-            <a href="https://www.instagram.com/turyawellness/">IG</a>
+          {/* Social Icons */}
+          <div className="flex gap-5">
+            <a
+              href="https://www.facebook.com/turyawellness"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Facebook"
+              className="hover:text-white transition"
+            >
+              <Facebook size={18} />
+            </a>
+
+            <a
+              href="https://www.instagram.com/turyawellness/"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Instagram"
+              className="hover:text-white transition"
+            >
+              <Instagram size={18} />
+            </a>
+
+            <a
+              href="https://www.youtube.com/@turyawellness"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="YouTube"
+              className="hover:text-white transition"
+            >
+              <Youtube size={18} />
+            </a>
           </div>
         </div>
       </div>
