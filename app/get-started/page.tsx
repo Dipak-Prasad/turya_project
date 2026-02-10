@@ -128,11 +128,11 @@ export default function GetStartedPage() {
                 </li>
                 <li className="flex gap-2">
                   <span className="text-blue-600 font-bold flex-shrink-0">•</span>
-                  <span>After successful payment, your session will be confirmed via whatsapp</span>
+                  <span>After successful payment, your session will be confirmed to whatsapp</span>
                 </li>
                 <li className="flex gap-2">
                   <span className="text-blue-600 font-bold flex-shrink-0">•</span>
-                  <span>After payment send screenshort to this email address: turya.emotions@gmail.com</span>
+                  <span>After payment send screenshort to this whatsapp number : +91-62912 06580</span>
                 </li>
               </ul>
             </div>
@@ -451,7 +451,7 @@ export default function GetStartedPage() {
                 <CheckCircle className="w-16 h-16 text-primary mx-auto mb-4" />
                 <h2 className="text-3xl font-display font-bold text-foreground mb-4">Booking Confirmed!</h2>
                 <p className="text-lg text-muted-foreground mb-8">
-                  Thank you for booking your free consultation with Turya Wellness. Your booking details have been sent to prasaddipak086@gmail.com.
+                  Thank you for booking your consultation with Turya Wellness. Your booking details have been sent to prasaddipak086@gmail.com.
                 </p>
                 <div className="bg-white dark:bg-card p-6 rounded-lg mb-8 text-left border border-border">
                   <h3 className="font-bold text-foreground mb-4">Session Details:</h3>
