@@ -370,7 +370,7 @@ export default function ContactPage() {
               Still Have Questions?
             </h2>
             <p className="text-lg text-white/95 mb-12 max-w-2xl mx-auto leading-relaxed">
-              Check out our frequently asked questions or book a free consultation with our experienced team.
+              Check out our frequently asked questions or book a consultation with our experienced team.
             </p>
             <button className="px-8 py-4 bg-white text-primary rounded-lg font-semibold hover:shadow-xl hover:scale-105 transition-all duration-200">
               Book Consultation
