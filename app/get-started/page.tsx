@@ -128,11 +128,11 @@ export default function GetStartedPage() {
                 </li>
                 <li className="flex gap-2">
                   <span className="text-blue-600 font-bold flex-shrink-0">•</span>
-                  <span>After successful payment, your session will be confirmed via email</span>
+                  <span>After successful payment, your session will be confirmed via whatsapp</span>
                 </li>
                 <li className="flex gap-2">
                   <span className="text-blue-600 font-bold flex-shrink-0">•</span>
-                  <span>For bank transfers, please share the transaction details with us</span>
+                  <span>After payment send screenshort to this email address: turya.emotions@gmail.com</span>
                 </li>
               </ul>
             </div>
