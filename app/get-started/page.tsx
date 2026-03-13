@@ -128,7 +128,7 @@ export default function GetStartedPage() {
                 </li>
                 <li className="flex gap-2">
                   <span className="text-blue-600 font-bold flex-shrink-0">•</span>
-                  <span>After successful payment, your session will be confirmed to whatsapp</span>
+                  <span>After successful payment, your session will be confirmed via whatsapp</span>
                 </li>
                 <li className="flex gap-2">
                   <span className="text-blue-600 font-bold flex-shrink-0">•</span>
