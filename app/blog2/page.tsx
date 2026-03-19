@@ -7,7 +7,7 @@ export default function Blog2Page() {
 
   const blog = {
    title: "The Power of Mindfulness: Transform Your Daily Life",
-    author: "Dr. Amelia Rodriguez",
+    author: "Prity D Sarkar",
     date: "2026-01-10",
     category: "Wellness",
     image: "/mindfulness-meditation-wellness.jpg",

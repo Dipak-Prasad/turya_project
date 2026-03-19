@@ -7,7 +7,7 @@ export default function Blog1Page() {
 
   const blog = {
     title: "Understanding Anxiety: Causes, Symptoms, and Coping Strategies",
-    author: "Dr. Sarah Johnson",
+    author: "Prity D Sarkar",
     date: "Jan 15, 2026",
     category: "Mental Health",
     image: "/anxiety-counselling-therapy.jpg",

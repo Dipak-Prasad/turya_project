@@ -8,7 +8,7 @@ export default function Blog4Page() {
   const blog = {
 
   title: "Teen Mental Health: Supporting Your Adolescent",
-  author: "Dr. Lisa Anderson",
+  author: "Prity D Sarkar",
   date: "Dec 15, 2025",
   category: "Mental Health",
   image: "https://images.unsplash.com/photo-1511988617509-a57c8a288659",

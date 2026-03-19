@@ -7,7 +7,7 @@ export default function Blog4Page() {
 
   const blog = {
     title: "Overcoming Depression: A Step-by-Step Recovery Guide",
-    author: "Dr. Michael Chen",
+    author: "Prity D Sarkar",
     date: "Dec 28, 2025",
     category: "Mental Health",
     image: "https://images.unsplash.com/photo-1493836512294-502baa1986e2",

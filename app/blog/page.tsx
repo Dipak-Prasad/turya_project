@@ -9,7 +9,7 @@ const blogPosts = [
     title: "Understanding Anxiety: Causes, Symptoms, and Coping Strategies",
     excerpt:
       "Anxiety is a common mental health condition that affects millions. Learn what causes it, how to recognize symptoms, and effective strategies to manage anxiety.",
-    author: "Dr. Sarah Johnson",
+    author: "Prity D Sarkar",
     date: "2026-01-15",
     category: "Mental Health",
     image: "/anxiety-counselling-therapy.jpg",
@@ -20,7 +20,7 @@ const blogPosts = [
     title: "The Power of Mindfulness: Transform Your Daily Life",
     excerpt:
       "Discover how mindfulness meditation can reduce stress, improve focus, and enhance overall well-being.",
-    author: "Dr. Amelia Rodriguez",
+    author: "Prity D Sarkar",
     date: "2026-01-10",
     category: "Wellness",
     image: "/mindfulness-meditation.png",
@@ -31,7 +31,7 @@ const blogPosts = [
     title: "Building Stronger Relationships: Communication Tips for Couples",
     excerpt:
       "Healthy communication is the foundation of strong relationships.",
-    author: "Dr. Michael Chen",
+    author: "Prity D Sarkar",
     date: "2026-01-05",
     category: "Relationships",
     image: "/couples-relationship-counselling.jpg",
@@ -42,7 +42,7 @@ const blogPosts = [
     title: "Overcoming Depression: A Step-by-Step Recovery Guide",
     excerpt:
       "Depression is treatable. Explore evidence-based strategies and recovery stories.",
-    author: "Dr. Emily Watson",
+    author: "Prity D Sarkar",
     date: "2025-12-28",
     category: "Mental Health",
     image: "/depression-recovery-therapy.jpg",
@@ -53,7 +53,7 @@ const blogPosts = [
     title: "Work-Life Balance: Achieving Wellness in a Busy World",
     excerpt:
       "Discover practical strategies to manage work stress and prioritize self-care.",
-    author: "Dr. James Wilson",
+    author: "Prity D Sarkar",
     date: "2025-12-20",
     category: "Wellness",
     image: "/work-life-balance-wellness.jpg",
@@ -64,7 +64,7 @@ const blogPosts = [
     title: "Teen Mental Health: Supporting Your Adolescent",
     excerpt:
       "Practical advice for parents to support teenage mental health.",
-    author: "Dr. Lisa Anderson",
+    author: "Prity D Sarkar",
     date: "2025-12-15",
     category: "Parenting",
     image: "/teen-adolescent-mental-health.jpg",

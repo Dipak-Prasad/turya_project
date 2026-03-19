@@ -7,7 +7,7 @@ export default function Blog3Page() {
 
   const blog = {
    title: "Building Stronger Relationships: Communication Tips for Couples",
-    author: "Dr. Michael Chen",
+    author: "Prity D Sarkar",
     date: "2026-01-05",
     category: "Relationships",
     image: "/couples-relationship-communication.jpg",

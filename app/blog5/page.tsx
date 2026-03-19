@@ -7,7 +7,7 @@ export default function Blog4Page() {
 
   const blog = {
      title: "Work-Life Balance: Achieving Wellness in a Busy World",
-  author: "Dr. James Wilson",
+  author: "Prity D Sarkar",
   date: "Dec 20, 2025",
   category: "Wellness",
   image: "https://images.unsplash.com/photo-1506126613408-eca07ce68773",
