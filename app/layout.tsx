@@ -24,8 +24,8 @@ export const metadata: Metadata = {
   description:
     "Professional mental health counselling and therapy services from Turya Wellness. Connect with certified therapists for personalized, compassionate mental health support online.",
   icons: {
-    icon: "/favicon.jpg",
-    apple: "/favicon.jpg",
+    icon: "/IMG_20260418_172735.jpg",
+    apple: "/IMG_20260418_172735.jpg",
   },
   colorScheme: "light dark",
 }
