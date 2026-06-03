@@ -2,11 +2,10 @@
 
 import type React from "react"
 
-import { useState, useEffect } from "react"
+import { useState } from "react"
 import Navigation from "@/components/navigation"
 import Footer from "@/components/footer"
 import { Mail, Phone, Send, Clock } from "lucide-react"
-import emailjs from "@emailjs/browser"
 
 export default function ContactPage() {
   const [formData, setFormData] = useState({
@@ -16,51 +15,72 @@ export default function ContactPage() {
     subject: "",
     message: "",
   })
+
   const [submitted, setSubmitted] = useState(false)
   const [loading, setLoading] = useState(false)
   const [error, setError] = useState("")
 
-  useEffect(() => {
-    // Initialize emailjs with your public key
-    emailjs.init("FUiP8B7B-s93Inwry")
-  }, [])
-
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
+  const handleChange = (
+    e: React.ChangeEvent<
+      HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement
+    >
+  ) => {
     const { name, value } = e.target
+
     setFormData((prev) => ({
       ...prev,
       [name]: value,
     }))
+
     setError("")
   }
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault()
+
     setLoading(true)
     setError("")
-    
-    try {
-      // Send email using emailjs
-      const templateParams = {
-        to_email: "prasaddipak086@gmail.com",
-        from_name: formData.name,
-        from_email: formData.email,
-        phone: formData.phone,
-        subject: formData.subject,
-        message: formData.message,
-      }
 
-      await emailjs.send(
-        "service_abyji3h",
-        "template_lttpd2e",
-        templateParams
+    try {
+      const response = await fetch(
+        "https://formsubmit.co/ajax/prasaddipak086@gmail.com",
+        {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+            Accept: "application/json",
+          },
+          body: JSON.stringify({
+            name: formData.name,
+            email: formData.email,
+            phone: formData.phone,
+            subject: formData.subject,
+            message: formData.message,
+            _subject: "New Contact Form Submission",
+            _captcha: "false",
+          }),
+        }
       )
 
-      setSubmitted(true)
-      setFormData({ name: "", email: "", phone: "", subject: "", message: "" })
-      setTimeout(() => {
-        setSubmitted(false)
-      }, 3000)
+      const result = await response.json()
+
+      if (result.success) {
+        setSubmitted(true)
+
+        setFormData({
+          name: "",
+          email: "",
+          phone: "",
+          subject: "",
+          message: "",
+        })
+
+        setTimeout(() => {
+          setSubmitted(false)
+        }, 3000)
+      } else {
+        throw new Error("Failed to send")
+      }
     } catch (error) {
       console.error("Error submitting form:", error)
       setError("Failed to send message. Please try again.")
@@ -133,8 +153,8 @@ export default function ContactPage() {
                   <div className="p-6 bg-primary/10 border border-primary/30 rounded-lg text-center">
                     <h3 className="text-xl font-bold text-primary mb-2">Thank you!</h3>
                     <p className="text-muted-foreground">
-                      Your message has been sent successfully to prasaddipak086@gmail.com. We'll get back to you soon.
-                    </p>
+    Your message has been sent successfully. We'll get back to you soon.
+        </p>
                   </div>
                 ) : (
                   <form onSubmit={handleSubmit} className="space-y-4 sm:space-y-6">
